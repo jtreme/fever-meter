@@ -1,0 +1,16 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs / local debug
+*.log
+npm-debug.log*
+
+# Local env files (do not commit secrets)
+.env
+.env.local
