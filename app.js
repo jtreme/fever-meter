@@ -378,11 +378,11 @@ function renderIncidents(game) {
       <div class="contact-share" style="--clark-share: ${clarkContactPct * 3.6}deg">
         <div class="contact-share__ring">
           <strong>${clarkContactPct}%</strong>
-          <span>Clark share</span>
+          <span>drawn by Clark</span>
         </div>
         <div>
-          <p class="mini-label">Clark Contact Share</p>
-          <h4>${escapeHtml(clarkContact)} of ${escapeHtml(totalContact)} GSV fouls</h4>
+          <p class="mini-label">Fouls Drawn</p>
+          <h4>Clark drew ${escapeHtml(clarkContact)} of GSV's ${escapeHtml(totalContact)} fouls</h4>
           <div class="contact-legend">
             ${game.contactShare
               .map(

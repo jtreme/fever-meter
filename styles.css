@@ -944,6 +944,20 @@ h3 {
   background: linear-gradient(90deg, var(--red), var(--gold));
 }
 
+.analysis-layout__column {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.analysis-layout__column .assist-quality-panel {
+  margin-bottom: 0;
+}
+
+.analysis-layout__column .missed-assist-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .assist-quality-panel {
   margin-bottom: 18px;
   background:
