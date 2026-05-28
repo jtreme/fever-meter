@@ -310,6 +310,51 @@ h3 {
   color: #11151d;
 }
 
+.game-log {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.game-log__item {
+  display: grid;
+  gap: 5px;
+  min-height: 96px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(31, 19, 18, 0.78);
+  color: var(--muted);
+  text-align: left;
+  cursor: pointer;
+}
+
+.game-log__item.is-active {
+  border-color: rgba(255, 176, 46, 0.58);
+  background:
+    radial-gradient(circle at 90% 15%, rgba(255, 176, 46, 0.2), transparent 30%),
+    rgba(41, 23, 18, 0.94);
+}
+
+.game-log__item span,
+.game-log__item em {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.game-log__item strong {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.05;
+}
+
+.game-log__item em {
+  color: var(--gold);
+}
+
 .meter-layout {
   align-items: stretch;
   gap: 18px;
@@ -331,8 +376,11 @@ h3 {
   flex: 1.1;
   display: flex;
   align-items: center;
-  gap: 22px;
-  padding: 24px;
+  gap: 28px;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 16% 22%, rgba(255, 176, 46, 0.22), transparent 32%),
+    linear-gradient(135deg, rgba(224, 58, 47, 0.18), rgba(31, 19, 18, 0.96));
 }
 
 .alert-panel {
@@ -342,21 +390,22 @@ h3 {
 
 .meter-ring {
   --angle: calc(var(--score) * 3.6deg);
-  flex: 0 0 142px;
+  flex: 0 0 178px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 142px;
-  height: 142px;
+  width: 178px;
+  height: 178px;
   border-radius: 50%;
   background:
     radial-gradient(circle at center, var(--panel-solid) 0 58%, transparent 59%),
     conic-gradient(var(--gold) 0 var(--angle), rgba(255, 255, 255, 0.14) var(--angle) 360deg);
+  box-shadow: 0 0 34px rgba(255, 176, 46, 0.24);
 }
 
 .meter-ring span {
-  font-size: 46px;
+  font-size: 64px;
   font-weight: 950;
   line-height: 1;
 }
@@ -439,18 +488,19 @@ h3 {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: 18px;
+  margin-bottom: 22px;
 }
 
 .stat-card {
   position: relative;
   overflow: hidden;
   min-height: 170px;
-  padding: 18px;
+  padding: 20px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(35, 21, 18, 0.92);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .stat-card__visual {
@@ -562,26 +612,58 @@ h3 {
 
 .stat-card:nth-child(1) {
   background:
+    radial-gradient(circle at 88% 14%, rgba(255, 176, 46, 0.2), transparent 28%),
     linear-gradient(135deg, rgba(255, 176, 46, 0.2), rgba(35, 21, 18, 0.95)),
     #241511;
 }
 
 .stat-card:nth-child(2) {
   background:
-    linear-gradient(135deg, rgba(224, 58, 47, 0.18), rgba(35, 21, 18, 0.95)),
-    #241511;
+    radial-gradient(circle at 88% 18%, rgba(224, 58, 47, 0.24), transparent 30%),
+    linear-gradient(135deg, rgba(224, 58, 47, 0.24), rgba(35, 21, 18, 0.95)),
+    #2a1513;
+}
+
+.stat-card:nth-child(3) {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(255, 138, 61, 0.24), transparent 30%),
+    linear-gradient(135deg, rgba(255, 138, 61, 0.18), rgba(35, 21, 18, 0.95)),
+    #251611;
 }
 
 .stat-card:nth-child(4) {
   background:
-    linear-gradient(135deg, rgba(94, 225, 161, 0.12), rgba(35, 21, 18, 0.95)),
-    #241511;
+    radial-gradient(circle at 84% 20%, rgba(94, 225, 161, 0.12), transparent 30%),
+    linear-gradient(135deg, rgba(94, 225, 161, 0.1), rgba(35, 21, 18, 0.95)),
+    #1e1714;
+}
+
+.stat-card:nth-child(5) {
+  background:
+    radial-gradient(circle at 84% 20%, rgba(255, 255, 255, 0.1), transparent 32%),
+    linear-gradient(135deg, rgba(255, 176, 46, 0.1), rgba(35, 21, 18, 0.95)),
+    #211715;
+}
+
+.stat-card:nth-child(6) {
+  background:
+    radial-gradient(circle at 84% 20%, rgba(255, 138, 61, 0.2), transparent 32%),
+    linear-gradient(135deg, rgba(224, 58, 47, 0.12), rgba(35, 21, 18, 0.95)),
+    #251511;
 }
 
 .stat-card:nth-child(7) {
   background:
-    linear-gradient(135deg, rgba(255, 138, 61, 0.14), rgba(35, 21, 18, 0.95)),
+    radial-gradient(circle at 84% 20%, rgba(255, 138, 61, 0.14), transparent 32%),
+    linear-gradient(135deg, rgba(255, 138, 61, 0.12), rgba(35, 21, 18, 0.95)),
     #241511;
+}
+
+.stat-card:nth-child(8) {
+  background:
+    radial-gradient(circle at 84% 20%, rgba(255, 176, 46, 0.14), transparent 32%),
+    linear-gradient(135deg, rgba(255, 176, 46, 0.1), rgba(35, 21, 18, 0.95)),
+    #211713;
 }
 
 .stat-card__label {
@@ -616,6 +698,8 @@ h3 {
 }
 
 .analysis-layout .panel:first-child {
+  display: flex;
+  flex-direction: column;
   background:
     linear-gradient(180deg, rgba(122, 67, 28, 0.24), rgba(31, 19, 18, 0.94)),
     var(--panel);
@@ -642,6 +726,7 @@ h3 {
   --curry-y: 36%;
   --free-throw-y: 68%;
   position: relative;
+  flex: 1;
   min-height: 430px;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -659,8 +744,13 @@ h3 {
 .court::after {
   content: "Distances measured from rim";
   position: absolute;
-  right: 12px;
-  bottom: 10px;
+  left: 12px;
+  top: 12px;
+  z-index: 3;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 195, 74, 0.3);
+  border-radius: 999px;
+  background: rgba(8, 12, 20, 0.76);
   color: rgba(255, 255, 255, 0.72);
   font-size: 11px;
   font-weight: 900;
@@ -898,23 +988,6 @@ h3 {
   font-weight: 900;
 }
 
-.court-notes {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.court-notes span {
-  padding: 9px 10px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
-}
-
 .assist-list {
   display: grid;
   gap: 14px;
@@ -946,16 +1019,38 @@ h3 {
 
 .analysis-layout__column {
   display: grid;
+  grid-template-rows: auto 1fr;
   gap: 18px;
-  align-content: start;
 }
 
 .analysis-layout__column .assist-quality-panel {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 0;
 }
 
 .analysis-layout__column .missed-assist-list {
+  flex: 1;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.analysis-layout__column .missed-assist-item {
+  min-height: 130px;
+}
+
+.analysis-layout__column .missed-assist-item strong {
+  font-size: 30px;
+}
+
+.analysis-layout__column .missed-assist-item span {
+  font-size: 14px;
+}
+
+.analysis-layout__column .missed-assist-item span:first-of-type {
+  margin-bottom: 6px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 950;
 }
 
 .assist-quality-panel {
@@ -1025,10 +1120,14 @@ h3 {
   line-height: 1.35;
 }
 
+.turnover-item span {
+  font-size: 13px;
+}
+
 .turnover-item span:first-of-type {
   margin-bottom: 5px;
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 950;
 }
 
@@ -1059,7 +1158,10 @@ h3 {
 .incident-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .foul-context-list {
@@ -1086,9 +1188,20 @@ h3 {
 
 .contact-share {
   display: grid;
-  grid-template-columns: 142px minmax(0, 1fr);
-  align-items: center;
+  grid-template-rows: auto auto 1fr;
+  align-items: start;
   gap: 14px;
+}
+
+.contact-share__content {
+  display: grid;
+  gap: 4px;
+  text-align: center;
+}
+
+.contact-share__breakdown {
+  display: grid;
+  gap: 8px;
 }
 
 .contact-share__ring {
@@ -1101,6 +1214,7 @@ h3 {
     radial-gradient(circle at center, rgba(31, 19, 18, 1) 0 55%, transparent 56%),
     conic-gradient(var(--red) 0 var(--clark-share), rgba(255, 176, 46, 0.74) var(--clark-share) 345deg, rgba(255, 255, 255, 0.38) 345deg 360deg);
   box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.28), 0 0 28px rgba(224, 58, 47, 0.28);
+  justify-self: center;
 }
 
 .contact-share__ring strong,
@@ -1112,13 +1226,16 @@ h3 {
   color: #fff;
   font-size: 34px;
   font-weight: 950;
+  line-height: 0.92;
 }
 
 .contact-share__ring span {
   margin-top: 48px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -1176,9 +1293,19 @@ h3 {
 
 .quarter-fouls {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  align-items: end;
-  gap: 14px;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+}
+
+.quarter-fouls__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.quarter-fouls__header h4 {
+  text-align: right;
 }
 
 .quarter-bars {
@@ -1452,25 +1579,52 @@ h3 {
 }
 
 .incident-item {
-  padding: 13px;
-  border: 1px solid var(--line);
+  min-height: 180px;
+  padding: 18px;
+  border: 1px solid rgba(255, 195, 74, 0.22);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.055);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(255, 176, 46, 0.18), transparent 32%),
+    linear-gradient(145deg, rgba(255, 176, 46, 0.08), rgba(40, 22, 18, 0.94));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.incident-item:nth-child(2) {
+  border-color: rgba(224, 58, 47, 0.28);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(224, 58, 47, 0.22), transparent 32%),
+    linear-gradient(145deg, rgba(224, 58, 47, 0.1), rgba(40, 22, 18, 0.94));
+}
+
+.incident-item:nth-child(3) {
+  border-color: rgba(255, 138, 61, 0.28);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(255, 138, 61, 0.22), transparent 32%),
+    linear-gradient(145deg, rgba(255, 138, 61, 0.1), rgba(40, 22, 18, 0.94));
+}
+
+.incident-item:nth-child(4) {
+  border-color: rgba(255, 255, 255, 0.18);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(255, 255, 255, 0.16), transparent 32%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(40, 22, 18, 0.94));
 }
 
 .incident-item strong {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   color: #fff;
-  font-size: 14px;
+  font-size: 17px;
+  font-weight: 950;
 }
 
 .incident-item span {
   display: block;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
-  line-height: 1.35;
+  line-height: 1.4;
+  white-space: pre-line;
 }
 
 .incident-item em {
@@ -1652,10 +1806,6 @@ code {
   .court-badge {
     max-width: 160px;
     font-size: 9px;
-  }
-
-  .court-notes {
-    grid-template-columns: 1fr;
   }
 
 }

@@ -35,7 +35,6 @@
           <span class="topbar__tag">Unofficial fan dashboard</span>
           <div class="topbar__links">
             <a href="#dashboard">Dashboard</a>
-            <a href="#publish">Publish</a>
           </div>
         </nav>
         <div class="hero__content">
@@ -45,10 +44,6 @@
             Game temperature, logo-watch alerts, Clark assist networks, Kelsey
             heat checks, Boston boards, and a full-team pulse for every Fever game.
           </p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="#dashboard">Open Dashboard</a>
-            <a class="button button--ghost" href="#publish">Make It Public</a>
-          </div>
         </div>
         <aside class="live-strip" aria-label="Current game summary">
           <div>
@@ -56,17 +51,18 @@
             <span id="game-label">Latest game</span>
           </div>
           <strong id="scoreline">IND 91 - NY 86</strong>
-          <small>Latest entry</small>
+          <small>Selected entry</small>
         </aside>
       </section>
 
       <section id="dashboard" class="dashboard" aria-labelledby="dashboard-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Latest game</p>
+            <p class="eyebrow">Game log</p>
             <h2 id="dashboard-title">Dashboard</h2>
           </div>
         </div>
+        <div class="game-log" id="game-log" aria-label="Fever game log"></div>
 
         <div class="meter-layout">
           <article class="meter-panel" aria-labelledby="meter-heading">
@@ -132,13 +128,6 @@
               </div>
               <div id="shot-dots"></div>
             </div>
-            <div class="court-notes" aria-label="Court distance notes">
-              <span>WNBA top arc: 22 ft 1.75 in</span>
-              <span>NBA top arc: 23 ft 9 in</span>
-              <span>Steph deep range: often 28-30 ft</span>
-              <span>Clark 33: 10 ft 10 in beyond WNBA arc</span>
-              <span>Half court from rim: 41 ft 9 in</span>
-            </div>
           </article>
 
           <div class="analysis-layout__column">
@@ -189,23 +178,6 @@
           <div class="foul-context-list" id="foul-context-list"></div>
           <div class="incident-list" id="incident-list"></div>
         </article>
-      </section>
-
-      <section id="publish" class="publish" aria-labelledby="publish-title">
-        <div>
-          <p class="eyebrow">Public launch path</p>
-          <h2 id="publish-title">Ready for GitHub Pages, Netlify, or Vercel</h2>
-          <p>
-            This public version ships without secrets in the browser. When you
-            add licensed data, keep the vendor token in a serverless function
-            and return only the normalized game payload the dashboard needs.
-          </p>
-        </div>
-        <ol class="steps">
-          <li>Commit these static files to a repository.</li>
-          <li>Deploy the folder as a static site.</li>
-          <li>Replace sample data in <code>app.js</code> with a serverless endpoint.</li>
-        </ol>
       </section>
 
       <footer class="site-footer">

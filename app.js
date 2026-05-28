@@ -1,4 +1,8 @@
 const sampleGame = {
+  id: "2026-05-22-gsv-at-ind",
+  date: "May 22",
+  opponent: "vs Golden State",
+  result: "W 90-82",
   label: "May 22, 2026: Valkyries at Fever",
   scoreline: "IND 90 - GSV 82",
   feverMeter: 86,
@@ -90,12 +94,12 @@ const sampleGame = {
   incidents: [
     {
       type: "Technical fouls",
-      detail: "End-of-half scuffle: Clark and Janelle Salaun received double technicals; Hull also picked up a technical. Clark/Salaun techs were also reset at the start of Q3.",
+      detail: "End-of-half scuffle: Clark / Janelle Salaun received double technicals.\n\nHull also picked up a technical.",
       impact: "Raises intensity",
     },
     {
       type: "Trash talk",
-      detail: "Clark and Tiffany Hayes exchanged words after the 33-foot logo three tied the game.",
+      detail: "Clark / Salaun kept talking after the double techs.\n\nClark / Tiffany Hayes also exchanged words after the 33-foot logo three tied the game.",
       impact: "Adds rivalry heat",
     },
     {
@@ -121,35 +125,30 @@ const sampleGame = {
       value: "2",
       meta: "Two Hull three-point looks that were good enough to tag as missed-assist chances.",
     },
-    {
-      label: "Assist upside",
-      value: "13",
-      meta: "Official 9 assists plus 4 rewatch-tagged missed assists.",
-    },
   ],
   turnoverScore: 6,
   turnoverNote:
-    "Clark had 6 official turnovers: 4 came in the fourth quarter, 3 were live-ball steals, and the most costly was the Flagrant 1 booked as an offensive-foul turnover.",
+    "Clark had 6 official turnovers. Four came in Q4, and the most costly was the Flagrant 1 booked as an offensive-foul turnover.",
   turnovers: [
     {
       label: "By quarter",
       value: "0 / 2 / 0 / 4",
-      meta: "Q1, Q2, Q3, Q4 split. Turnover trouble was specifically a late-game story.",
+      meta: "Turnover trouble was specifically a late-game story.",
     },
     {
       label: "Bad-pass turnovers",
       value: "4",
-      meta: "Two in Q2 and two in Q4. Three became steals, which adds transition risk.",
+      meta: "2 in Q2, 2 in Q4. 3 became steals.",
     },
     {
       label: "Teammate drop",
       value: "1",
-      meta: "Officially logged as a Clark bad pass, but rewatch notes tag it as a catchable pass that got dropped.",
+      meta: "Logged as Clark bad pass; rewatch tags it as a dropped catchable pass.",
     },
     {
       label: "Flagrant TO",
       value: "1",
-      meta: "Q4 offensive-foul turnover became a Flagrant 1 after review, giving Burton free throws.",
+      meta: "Q4 offensive-foul turnover became a Flagrant 1 after review.",
     },
   ],
   assists: [["Boston", 4], ["Cunningham", 2], ["Johnson", 1], ["Mitchell", 1], ["Hull", 1]],
@@ -165,6 +164,120 @@ const sampleGame = {
     },
   ],
 };
+
+const upcomingGame = {
+  ...sampleGame,
+  id: "2026-05-28-ind-at-gsv",
+  date: "May 28",
+  opponent: "at Golden State",
+  result: "Pregame",
+  label: "May 28, 2026: Fever at Valkyries",
+  scoreline: "Pregame · 10 PM ET",
+  feverMeter: 0,
+  commentary:
+    "Pregame shell for the rematch. Add box-score stats, rewatch notes, contact tags, missed assists, turnovers, and game-temperature events after the game.",
+  cards: [
+    {
+      label: "Clark Watch",
+      value: "TBD",
+      meta: "Track points, assists, threes, turnovers, fouls drawn, and deep-shot moments.",
+    },
+    {
+      label: "Logo Three Alert",
+      value: "TBD",
+      meta: "Log any 30+ foot makes or broadcast-noted deep range shots.",
+      visual: "logo-three",
+    },
+    {
+      label: "Kelsey Heat Check",
+      value: "TBD",
+      meta: "Track Mitchell scoring bursts, threes, and free-throw pressure.",
+      visual: "fire",
+    },
+    {
+      label: "Boston Board Room",
+      value: "TBD",
+      meta: "Track Boston rebounds, paint touches, efficiency, and defensive plays.",
+      visual: "boards",
+    },
+    {
+      label: "Supporting Cast Pulse",
+      value: "TBD",
+      meta: "Log Sophie, Hull, Raven, Myisha, Billings, Timpson, and bench swing moments.",
+    },
+    {
+      label: "Raven Ready",
+      value: "TBD",
+      meta: "Track Raven's spot minutes, assists, defense, and momentum plays.",
+      visual: "raven",
+    },
+    {
+      label: "Fever Vibe Shift",
+      value: "TBD",
+      meta: "Find the run or quarter that changed the game.",
+    },
+    {
+      label: "Clutch Pulse",
+      value: "TBD",
+      meta: "Track late-game execution, free throws, turnovers, and stops.",
+    },
+  ],
+  scoreBreakdown: [
+    { label: "Result", value: "TBD", meta: "Add win/loss and margin after final" },
+    { label: "Clark engine", value: "TBD", meta: "Points, assists, threes, turnovers, and gravity" },
+    { label: "Team core", value: "TBD", meta: "Boston, Mitchell, and supporting cast impact" },
+    { label: "Vibe shift", value: "TBD", meta: "Runs, momentum swings, and comeback energy" },
+    { label: "Logo moment", value: "TBD", meta: "Deep threes or viral shot moments" },
+    { label: "Watch-flow drag", value: "TBD", meta: "Fouls, reviews, challenges, and chippiness" },
+  ],
+  incidentScore: 0,
+  foulContext: [
+    { label: "This game", totalFouls: "TBD", foulsPerTeam: "TBD", note: "Add final team foul split" },
+    { label: "Fever games 2026", totalFouls: "49.3", foulsPerTeam: "24.7", note: "Update after this game" },
+    { label: "2026 WNBA pace", totalFouls: "43.2", foulsPerTeam: "21.6", note: "Freedom-of-movement emphasis" },
+    { label: "2021-25 WNBA avg", totalFouls: "35.1", foulsPerTeam: "17.5", note: "Recent historical norm" },
+  ],
+  foulWatch: {
+    title: "To Watch",
+    detail:
+      "Does the rematch keep Fever games above the early WNBA whistle pace? Update total fouls after the final.",
+    tag: "Pregame tracker",
+  },
+  contactShare: [
+    { label: "Clark", value: 0, note: "Add rewatch count" },
+    { label: "Other Fever", value: 0, note: "Add rewatch count" },
+    { label: "GSV offensive", value: 0, note: "Add offensive fouls" },
+  ],
+  gsvFoulsByQuarter: [
+    { label: "Q1", value: 0 },
+    { label: "Q2", value: 0 },
+    { label: "Q3", value: 0 },
+    { label: "Q4", value: 0 },
+  ],
+  incidents: [
+    { type: "Technical fouls", detail: "Add any techs after rewatch.", impact: "TBD" },
+    { type: "Trash talk", detail: "Add visible exchanges or broadcast-noted moments.", impact: "TBD" },
+    { type: "Reviews", detail: "Track reviews and challenges that slow the game.", impact: "TBD" },
+    { type: "Whistle drag", detail: "Add total fouls and stoppage notes.", impact: "TBD" },
+  ],
+  missedAssistScore: 0,
+  missedAssists: [
+    { label: "Paint chances", value: "0", meta: "Add missed layup/paint chances from Clark passes." },
+    { label: "Open threes", value: "0", meta: "Add clean three-point looks that did not become assists." },
+  ],
+  turnoverScore: 0,
+  turnoverNote: "Add Clark turnover context after the game.",
+  turnovers: [
+    { label: "By quarter", value: "TBD", meta: "Add turnover timing." },
+    { label: "Bad-pass turnovers", value: "TBD", meta: "Separate true bad passes from teammate drops." },
+    { label: "Teammate drop", value: "TBD", meta: "Add any catchable-pass turnovers." },
+    { label: "Offensive foul TO", value: "TBD", meta: "Add any offensive-foul turnovers." },
+  ],
+  assists: [["TBD", 0]],
+  shots: [],
+};
+
+const games = [sampleGame, upcomingGame];
 
 const schemaCards = [
   {
@@ -189,6 +302,7 @@ const schemaCards = [
   },
 ];
 
+const gameLog = document.querySelector("#game-log");
 const cardGrid = document.querySelector("#card-grid");
 const assistList = document.querySelector("#assist-list");
 const scoreList = document.querySelector("#score-list");
@@ -206,7 +320,7 @@ const distanceBeam = document.querySelector("#distance-beam");
 const distanceBeamLabel = document.querySelector("#distance-beam-label");
 const viewButtons = document.querySelectorAll("[data-view]");
 const localDataKey = "fever-meter-game-json";
-let activeGame = sampleGame;
+let activeGame = games[0];
 
 function escapeHtml(value) {
   return String(value)
@@ -219,6 +333,20 @@ function escapeHtml(value) {
 
 function formatJson(game) {
   return JSON.stringify(game, null, 2);
+}
+
+function renderGameLog() {
+  gameLog.innerHTML = games
+    .map(
+      (game) => `
+        <button class="game-log__item${game.id === activeGame.id ? " is-active" : ""}" type="button" data-game-id="${escapeHtml(game.id)}">
+          <span>${escapeHtml(game.date)}</span>
+          <strong>${escapeHtml(game.opponent)}</strong>
+          <em>${escapeHtml(game.result)}</em>
+        </button>
+      `,
+    )
+    .join("");
 }
 
 function validateGame(game) {
@@ -239,6 +367,10 @@ function validateGame(game) {
 function normalizeGame(game) {
   validateGame(game);
   return {
+    id: String(game.id || "manual-game"),
+    date: String(game.date || "Manual"),
+    opponent: String(game.opponent || "Manual game"),
+    result: String(game.result || game.scoreline || "Score TBD"),
     label: String(game.label || "Manual Game"),
     scoreline: String(game.scoreline || "Score TBD"),
     feverMeter: Math.max(0, Math.min(100, Number(game.feverMeter))),
@@ -364,7 +496,8 @@ function renderIncidents(game) {
   const reference = Number(foulRows.find((item) => item.label === "2026 WNBA pace")?.totalFouls) || 43.2;
   const referencePosition = Math.min(100, Math.max(0, (reference / maxTotalFouls) * 100));
   const barClasses = ["is-hot", "is-fever", "is-current", "is-history"];
-  const totalContact = game.contactShare.reduce((sum, item) => sum + item.value, 0) || 1;
+  const rawTotalContact = game.contactShare.reduce((sum, item) => sum + item.value, 0);
+  const totalContact = rawTotalContact || 1;
   const clarkContact = game.contactShare.find((item) => item.label === "Clark")?.value || 0;
   const clarkContactPct = Math.round((clarkContact / totalContact) * 100);
   const maxQuarterFouls = Math.max(...game.gsvFoulsByQuarter.map((item) => item.value), 1);
@@ -372,17 +505,20 @@ function renderIncidents(game) {
     .filter((item) => item.label === "Q3" || item.label === "Q4")
     .reduce((sum, item) => sum + item.value, 0);
   const totalGsvFouls = game.gsvFoulsByQuarter.reduce((sum, item) => sum + item.value, 0);
+  const secondHalfPct = totalGsvFouls ? Math.round((secondHalfFouls / totalGsvFouls) * 100) : 0;
 
   foulContextList.innerHTML = `
     <div class="contact-visuals">
       <div class="contact-share" style="--clark-share: ${clarkContactPct * 3.6}deg">
+        <div class="contact-share__content">
+          <h4>Clark drew ${escapeHtml(clarkContact)} fouls</h4>
+        </div>
         <div class="contact-share__ring">
           <strong>${clarkContactPct}%</strong>
-          <span>drawn by Clark</span>
+          <span>${escapeHtml(clarkContact)} of ${escapeHtml(rawTotalContact)}</span>
         </div>
-        <div>
-          <p class="mini-label">Fouls Drawn</p>
-          <h4>Clark drew ${escapeHtml(clarkContact)} of GSV's ${escapeHtml(totalContact)} fouls</h4>
+        <div class="contact-share__breakdown">
+          <p class="mini-label">Times Players Were Fouled By GSV</p>
           <div class="contact-legend">
             ${game.contactShare
               .map(
@@ -399,9 +535,9 @@ function renderIncidents(game) {
         </div>
       </div>
       <div class="quarter-fouls">
-        <div>
+        <div class="quarter-fouls__header">
           <p class="mini-label">GSV Fouls By Quarter</p>
-          <h4>${escapeHtml(secondHalfFouls)} of ${escapeHtml(totalGsvFouls)} after halftime</h4>
+          <h4>${escapeHtml(secondHalfPct)}% after halftime</h4>
         </div>
         <div class="quarter-bars">
           ${game.gsvFoulsByQuarter
@@ -604,6 +740,8 @@ function renderGame(game) {
   document.querySelector("#meter-score").textContent = game.feverMeter;
   document.querySelector(".meter-ring").style.setProperty("--score", game.feverMeter);
   document.querySelector("#meter-copy").textContent = game.commentary;
+  document.querySelector("#score-formula-title").textContent =
+    game.feverMeter > 0 ? `How The Meter Hits ${game.feverMeter}` : "Meter Formula Placeholder";
   renderCards(game.cards);
   renderScoreBreakdown(game.scoreBreakdown);
   renderIncidents(game);
@@ -615,6 +753,7 @@ function renderGame(game) {
 
 function setSampleView() {
   renderGame(activeGame);
+  renderGameLog();
 }
 
 function setSchemaView() {
@@ -639,13 +778,23 @@ viewButtons.forEach((button) => {
   });
 });
 
+gameLog.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-game-id]");
+  if (!button) return;
+  const nextGame = games.find((game) => game.id === button.dataset.gameId);
+  if (!nextGame) return;
+  activeGame = nextGame;
+  setSampleView();
+});
+
 try {
   const savedGame = localStorage.getItem(localDataKey);
   if (savedGame) {
-    activeGame = normalizeGame(JSON.parse(savedGame));
+    games[0] = normalizeGame({ ...games[0], ...JSON.parse(savedGame) });
+    activeGame = games[0];
   }
 } catch {
-  activeGame = sampleGame;
+  activeGame = games[0];
   localStorage.removeItem(localDataKey);
 }
 
